@@ -1,45 +1,23 @@
 import React from 'react'
 import { ResponsiveRadar } from '@nivo/radar'
-const MyResponsiveRadar = () => {
-    const data = [
-        {
-            "taste": "fruity",
-            "chardonay": 112,
-            "carmenere": 103,
-            "syrah": 89
-        },
-        {
-            "taste": "bitter",
-            "chardonay": 73,
-            "carmenere": 45,
-            "syrah": 119
-        },
-        {
-            "taste": "heavy",
-            "chardonay": 58,
-            "carmenere": 33,
-            "syrah": 77
-        },
-        {
-            "taste": "strong",
-            "chardonay": 78,
-            "carmenere": 105,
-            "syrah": 25
-        },
-        {
-            "taste": "sunny",
-            "chardonay": 48,
-            "carmenere": 88,
-            "syrah": 28
-        }
-    ]
+const NivoRadarChart = ({fields, tables}) => {
+    const indexBy = fields.dimID[0].name
+    const keys = fields.metricID.map((el) => el.name)
+
+    const data = tables.DEFAULT.map((el) => {
+        const obj = {}
+        obj[indexBy] = el.dimID[0]
+        keys.forEach((k, index) => {
+            obj[k] = el.metricID[index]
+        })
+        return obj
+    })
+
     return (
-
-
         <ResponsiveRadar
             data={data}
-            keys={['chardonay', 'carmenere', 'syrah']}
-            indexBy="taste"
+            keys={keys}
+            indexBy={indexBy}
             maxValue="auto"
             margin={{top: 70, right: 80, bottom: 40, left: 80}}
             curve="linearClosed"
@@ -87,4 +65,4 @@ const MyResponsiveRadar = () => {
         />
     );
 }
-export default  MyResponsiveRadar
+export default  NivoRadarChart

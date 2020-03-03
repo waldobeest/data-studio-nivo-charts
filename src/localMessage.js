@@ -9,19 +9,19 @@ export const message = {
     DEFAULT: [
       {
         dimID: ['Campaign 1'],
-        metricID: [16, 329, 1],
+        metricID: [16, 18, 9],
       },
       {
         dimID: ['Campaign 2'],
-        metricID: [31, 1002, 4],
+        metricID: [31, 24, 7],
       },
       {
         dimID: ['Campaign 3'],
-        metricID: [51, 1231, 11],
+        metricID: [19, 19, 19],
       },
       {
         dimID: ['Campaign 4'],
-        metricID: [41, 1522, 16],
+        metricID: [7, 21, 23],
       },
     ],
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsiveChord } from '@nivo/chord'
 
-const MyResponsiveChord = () => {
+const NivoChordChart = () => {
     const matrix = [
         [
             139,
@@ -96,4 +96,4 @@ const MyResponsiveChord = () => {
     );
 }
 
-export default MyResponsiveChord
+export default NivoChordChart
