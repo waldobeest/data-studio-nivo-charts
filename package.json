@@ -26,12 +26,15 @@
     "babel-loader": "^8.0.6"
   },
   "dependencies": {
+    "serialize-javascript": ">=2.1.1",
     "@emotion/core": "^10.0.14",
     "@nivo/calendar": "^0.61.1",
     "@nivo/chord": "^0.61.1",
     "@nivo/radar": "^0.61.1",
+    "clean-css": "^4.1.11",
     "d3-format": "^1.4.3",
     "d3-webpack-loader": "^0.1.1",
+    "lodash.template": "^4.5.0",
     "prop-types": "^15.7.2",
     "radar-chart": "^1.0.6",
     "react": "^16.8.6",
