@@ -1,0 +1,23 @@
+{
+  "name": "Nivo React Chart",
+  "organization": "Viewmetrics",
+  "description": "A toolbox for Nivo Charts",
+  "logoUrl": "",
+  "organizationUrl": "https://viewmetrics.co.za",
+  "supportUrl": "",
+  "packageUrl": "",
+  "devMode": true,
+  "components": [
+    {
+      "id": "nivoReact",
+      "name": "Nivo React Chart",
+      "description": "A toolbox for Nivo Charts",
+      "iconUrl": "",
+      "resource": {
+        "js": "YOUR_GCS_BUCKET/index.js",
+        "config": "YOUR_GCS_BUCKET/index.json",
+        "css": "YOUR_GCS_BUCKET/index.css"
+      }
+    }
+  ]
+}

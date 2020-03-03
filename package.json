@@ -1,0 +1,47 @@
+{
+  "dsccViz": {
+    "gcsDevBucket": "gs://",
+    "gcsProdBucket": "gs://",
+    "jsFile": "index.js",
+    "jsonFile": "index.json",
+    "cssFile": "index.css",
+    "print": "printMessage.js"
+  },
+  "scripts": {
+    "build:dev": "NODE_ENV=production node scripts/build.js dev",
+    "build:prod": "NODE_ENV=production node scripts/build.js prod",
+    "push:dev": "dscc-scripts viz push -d dev",
+    "push:prod": "dscc-scripts viz push -d prod",
+    "update_message": "dscc-scripts viz update_message -f object",
+    "start": "dscc-scripts viz start",
+    "deploy:dev": "yarn build:dev && yarn push:dev",
+    "deploy:prod": "yarn build:prod && yarn push:prod"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "@google/dscc": "^0.3.8",
+    "@google/dscc-scripts": "^1.0.7",
+    "babel-loader": "^8.0.6"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@nivo/calendar": "^0.61.1",
+    "@nivo/chord": "^0.61.1",
+    "@nivo/radar": "^0.61.1",
+    "d3-format": "^1.4.3",
+    "d3-webpack-loader": "^0.1.1",
+    "prop-types": "^15.7.2",
+    "radar-chart": "^1.0.6",
+    "react": "^16.8.6",
+    "react-d3-library": "^1.1.8",
+    "react-dom": "^16.8.6"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
