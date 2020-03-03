@@ -8,6 +8,10 @@ Calendar https://nivo.rocks/calendar/
 Chord https://nivo.rocks/chord/
 Radar https://nivo.rocks/radar/
 
+## Getting Started:
+yarn
+yarn start
+
 ## Credits
 
 Forked from: anvilinsights/data-studio-react-starter
