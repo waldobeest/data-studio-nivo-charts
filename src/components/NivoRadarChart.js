@@ -1,8 +1,22 @@
 import React from 'react'
 import { ResponsiveRadar } from '@nivo/radar'
 const NivoRadarChart = ({fields, tables}) => {
-    const indexBy = fields.dimID[0].name
+    // const indexBy = fields.dimID[0].name
     const keys = fields.metricID.map((el) => el.name)
+
+    // TODO swop axes
+
+    // const data = tables.DEFAULT.map((el) => {
+    //     const obj = {}
+    //     obj[indexBy] = el.dimID[0]
+    //     keys.forEach((k, index) => {
+    //         obj[k] = el.metricID[index]
+    //     })
+    //     return obj
+    // })
+
+    const indexBy = fields.dimID[0].name
+    // const keys = tables.DEFAULT.map((el) => el.dimID)
 
     const data = tables.DEFAULT.map((el) => {
         const obj = {}
@@ -12,6 +26,9 @@ const NivoRadarChart = ({fields, tables}) => {
         })
         return obj
     })
+
+    console.log({indexBy})
+    console.log({keys})
 
     return (
         <ResponsiveRadar

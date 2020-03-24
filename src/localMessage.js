@@ -37,19 +37,19 @@ export const message = {
     metricID: [
       {
         id: 'qt_8isx6a0xvb',
-        name: 'Clicks',
+        name: 'KmScore',
         type: 'NUMBER',
         concept: 'METRIC',
       },
       {
         id: 'qt_8isx6a0xvc',
-        name: 'Impressions',
+        name: 'EventScore',
         type: 'NUMBER',
         concept: 'METRIC',
       },
       {
         id: 'qt_8isx6asdf0xvc',
-        name: 'Conversions',
+        name: 'TATScore',
         type: 'NUMBER',
         concept: 'METRIC',
       },
